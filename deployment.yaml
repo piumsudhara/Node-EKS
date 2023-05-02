@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: node-eks
-          image: 651010102653.dkr.ecr.ap-southeast-1.amazonaws.com/node-eks
+          image: 651010102653.dkr.ecr.ap-southeast-1.amazonaws.com/node-eks:1.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
