@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: nnode-eks
+        app: node-eks
     spec:
       containers:
         - name: node-eks
