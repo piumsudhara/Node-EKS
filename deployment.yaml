@@ -2,21 +2,33 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: node-eks
-  labels:
-    app: node-eks
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: node-eks
   template:
     metadata:
       labels:
-        app: node-eks
+        app: nnode-eks
     spec:
       containers:
         - name: node-eks
-          image: 651010102653.dkr.ecr.ap-southeast-1.amazonaws.com/node-eks:1.0
-          imagePullPolicy: Always
+          image: cloudlego/node-eks:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 8000
+          env:
+            - name: PORT
+              value: "8000"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-eks
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8000
+  selector:
+    app: node-eks
