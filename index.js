@@ -4,7 +4,3 @@ const app = express();
 app.listen(3000, () => {
   console.log("Application Listening on port 3000");
 });
-
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
-});
