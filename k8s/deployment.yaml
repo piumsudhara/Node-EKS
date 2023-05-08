@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-eks
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-eks
+  template:
+    metadata:
+      labels:
+        app: node-eks
+    spec:
+      containers:
+        - name: node-eks
+          image: 651010102653.dkr.ecr.ap-southeast-1.amazonaws.com/node-eks:latest
+          imagePullPolicy: Always
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: "1"
+            requests:
+              memory: 256Mi
+              cpu: "1"
+          ports:
+            - containerPort: 8080
