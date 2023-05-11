@@ -2,7 +2,7 @@
 var express = require('express');
 var app = express();
 
-app.set("port", process.env.PORT || 8080);
+app.set("port", process.env.PORT || 8000);
 
 app.get('/', function (req, res) {
    res.writeHead(200, {'Content-Type': 'application/json'});
