@@ -12,6 +12,7 @@ spec:
       labels:
         app: nodeeks
     spec:
+      terminationGracePeriodSeconds: 30
       containers:
         - name: nodeeks
           image: 651010102653.dkr.ecr.ap-southeast-1.amazonaws.com/nodeeks:latest
