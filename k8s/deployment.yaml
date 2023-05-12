@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: node-eks
-          image: 651010102653.dkr.ecr.ap-southeast-1.amazonaws.com/node-eks:latest
+          image: 651010102653.dkr.ecr.ap-southeast-1.amazonaws.com/nodeeks:latest
           imagePullPolicy: Always
           resources:
             limits:
