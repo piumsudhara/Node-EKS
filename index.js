@@ -6,7 +6,7 @@ app.set("port", process.env.PORT || 8000);
 
 app.get('/', function (req, res) {
    res.writeHead(200, {'Content-Type': 'application/json'});
-   var response = { "response" : "API Is Running" }
+   var response = { "response" : "API Is Running." }
    res.end(JSON.stringify(response));
 })
 app.get('/:id', function (req, res) {
