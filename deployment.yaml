@@ -17,6 +17,7 @@ spec:
       containers:
         - name: nodeeks
           image: 651010102653.dkr.ecr.ap-southeast-1.amazonaws.com/nodeeks:latest
+          imagePullPolicy: "Always"
           ports:
             - containerPort: 8000
           env:
