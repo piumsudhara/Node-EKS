@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-eks
+  name: nodeeks
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: node-eks
+      app: nodeeks
   template:
     metadata:
       labels:
-        app: node-eks
+        app: nodeeks
     spec:
       containers:
-        - name: node-eks
+        - name: nodeeks
           image: 651010102653.dkr.ecr.ap-southeast-1.amazonaws.com/nodeeks:latest
           imagePullPolicy: Always
           resources:
